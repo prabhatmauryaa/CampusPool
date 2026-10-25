@@ -1,0 +1,23 @@
+# Environment files and secrets
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Local history and Git metadata
+.history/
+**/.git/
+frontend/.git-archive/
+
+# Dependencies and generated output
+**/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
