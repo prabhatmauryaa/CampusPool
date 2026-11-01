@@ -320,12 +320,12 @@ export default function AdminPage() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
+    <div className="min-h-screen flex flex-col bg-[#F6F8FB]">
       <Navbar />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
         {/* Admin Header Banner */}
-        <div className="bg-gradient-to-r from-[#08101E] via-[#0E1A2E] to-[#12243F] text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-5">
+        <div className="bg-gradient-to-r from-[#16324F] via-[#12283e] to-[#0e2032] text-white rounded-3xl p-6 sm:p-8 border border-[#224468] shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-5">
           <div className="space-y-1.5">
             <div className="flex items-center gap-2">
               <span className="px-2.5 py-0.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30 text-xs font-semibold">

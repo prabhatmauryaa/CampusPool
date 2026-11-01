@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans',sans-serif]" suppressHydrationWarning>
+      <body className="min-h-full flex flex-col bg-[#F6F8FB] text-[#172B4D] font-['Plus_Jakarta_Sans',sans-serif]" suppressHydrationWarning>
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>

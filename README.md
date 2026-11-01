@@ -1,10 +1,9 @@
 # CampusPool — College Ride-Sharing Web Application
 
 **Tagline:** Same destination. Shared ride. Lower cost.  
-**Institution:** KIET Group of Institutions  
+**Institution:** KIET Group of Institutions, Ghaziabad  
 **Domain Restriction:** `@kiet.edu`  
-**Hackathon:** InnoTech'26  
-**Team:** RouteRiders  
+**Platform:** CampusPool Student Ride-Sharing  
 
 ---
 
@@ -98,7 +97,7 @@ CampusPool/
 │   │   │   ├── AuthBanner.js         # Split-screen brand hero with student travel photography
 │   │   │   ├── CancellationModal.js  # Warning modal with countdown to 30-limit suspension
 │   │   │   ├── EmergencySupportModal.js # Direct-dial campus gate & national emergency numbers
-│   │   │   ├── Footer.js             # Campus safety safeguards & InnoTech'26 RouteRiders footer
+│   │   │   ├── Footer.js             # Campus safety safeguards & verified KIET footer
 │   │   │   ├── JoinModal.js          # Seat reservation modal
 │   │   │   ├── Navbar.js             # Midnight navy luxury header with emergency trigger
 │   │   │   ├── ReportModal.js        # Confidential incident report submission

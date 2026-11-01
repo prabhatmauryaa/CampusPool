@@ -94,13 +94,13 @@ export default function DashboardPage() {
   const isHighRisk = cancellationStatus.cancellationCount >= 25;
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
+    <div className="min-h-screen flex flex-col bg-[#F6F8FB]">
       <Navbar />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
         {/* Welcome Header */}
-        <div className="bg-gradient-to-r from-[#08101E] via-[#0E1A2E] to-[#12243F] rounded-3xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden border border-slate-800">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+        <div className="bg-gradient-to-r from-[#16324F] via-[#12283e] to-[#0e2032] rounded-3xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden border border-[#224468]">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#14B8A6]/15 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
 
           <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="space-y-2">

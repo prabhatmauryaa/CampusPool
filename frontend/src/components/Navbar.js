@@ -132,41 +132,41 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-40 bg-[#0B1528]/95 backdrop-blur-md border-b border-slate-800 text-slate-100">
+      <nav className="sticky top-0 z-40 bg-[#16324F]/95 backdrop-blur-md border-b border-[#224468] text-slate-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo and Campus Tag */}
             <div className="flex items-center gap-6">
               <Link href="/" className="flex items-center gap-3 group">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-500 to-emerald-400 flex items-center justify-center text-slate-950 font-bold shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform">
-                  <Car className="w-5 h-5 text-slate-950" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#14B8A6] to-[#2dd4bf] flex items-center justify-center text-[#16324F] font-bold shadow-md shadow-[#14B8A6]/20 group-hover:scale-105 transition-transform">
+                  <Car className="w-5 h-5 text-[#16324F]" />
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5">
                     <span className="text-xl font-extrabold tracking-tight text-white font-['Outfit',sans-serif]">
-                      Campus<span className="text-teal-400">Pool</span>
+                      Campus<span className="text-[#14B8A6]">Pool</span>
                     </span>
-                    <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-teal-500/20 text-teal-300 border border-teal-500/30">
+                    <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-[#14B8A6]/20 text-[#2dd4bf] border border-[#14B8A6]/30">
                       KIET
                     </span>
                   </div>
-                  <div className="text-[10px] text-slate-400 font-medium">
+                  <div className="text-[10px] text-slate-300 font-medium">
                     Same destination. Shared ride.
                   </div>
                 </div>
               </Link>
 
               {/* Desktop Nav Links */}
-              <div className="hidden md:flex items-center gap-1 pl-4 border-l border-slate-800 text-sm font-medium">
+              <div className="hidden md:flex items-center gap-1 pl-4 border-l border-[#224468] text-sm font-medium">
                 <Link
                   href="/rides"
                   className={`px-3 py-2 rounded-lg transition-colors flex items-center gap-2 ${
                     pathname === '/rides'
-                      ? 'bg-teal-500/10 text-teal-300 font-semibold'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
+                      ? 'bg-[#14B8A6]/20 text-[#2dd4bf] font-semibold'
+                      : 'text-slate-200 hover:text-white hover:bg-[#1f456c]'
                   }`}
                 >
-                  <Search className="w-4 h-4 text-teal-400" />
+                  <Search className="w-4 h-4 text-[#14B8A6]" />
                   Find a Ride
                 </Link>
 
@@ -174,11 +174,11 @@ export default function Navbar() {
                   href="/rides/create"
                   className={`px-3 py-2 rounded-lg transition-colors flex items-center gap-2 ${
                     pathname === '/rides/create'
-                      ? 'bg-teal-500/10 text-teal-300 font-semibold'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
+                      ? 'bg-[#14B8A6]/20 text-[#2dd4bf] font-semibold'
+                      : 'text-slate-200 hover:text-white hover:bg-[#1f456c]'
                   }`}
                 >
-                  <PlusCircle className="w-4 h-4 text-emerald-400" />
+                  <PlusCircle className="w-4 h-4 text-[#2dd4bf]" />
                   Offer a Ride
                 </Link>
 
@@ -187,11 +187,11 @@ export default function Navbar() {
                     href="/my-rides"
                     className={`px-3 py-2 rounded-lg transition-colors flex items-center gap-2 ${
                       pathname === '/my-rides'
-                        ? 'bg-teal-500/10 text-teal-300 font-semibold'
-                        : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
+                        ? 'bg-[#14B8A6]/20 text-[#2dd4bf] font-semibold'
+                        : 'text-slate-200 hover:text-white hover:bg-[#1f456c]'
                     }`}
                   >
-                    <Layers className="w-4 h-4 text-teal-400" />
+                    <Layers className="w-4 h-4 text-[#14B8A6]" />
                     My Rides
                   </Link>
                 )}
@@ -218,10 +218,10 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setEmergencyOpen(true)}
-                className="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 text-rose-300 transition-colors"
+                className="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-[#DC2626]/15 hover:bg-[#DC2626]/25 border border-[#DC2626]/40 text-[#fca5a5] transition-colors"
                 title="Emergency campus security and hotlines"
               >
-                <PhoneCall className="w-3.5 h-3.5 text-rose-400" />
+                <PhoneCall className="w-3.5 h-3.5 text-[#DC2626]" />
                 Emergency 24x7
               </button>
 
@@ -260,11 +260,11 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => setNotificationsOpen(!notificationsOpen)}
-                    className="relative p-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-colors"
+                    className="relative p-2 rounded-xl text-slate-200 hover:text-white hover:bg-[#1f456c] transition-colors"
                   >
                     <Bell className="w-5 h-5" />
                     {unreadCount > 0 && (
-                      <span className="absolute top-1 right-1 w-4 h-4 bg-teal-400 text-slate-950 font-bold text-[10px] rounded-full flex items-center justify-center">
+                      <span className="absolute top-1 right-1 w-4 h-4 bg-[#14B8A6] text-white font-bold text-[10px] rounded-full flex items-center justify-center">
                         {unreadCount > 9 ? '9+' : unreadCount}
                       </span>
                     )}
@@ -272,8 +272,8 @@ export default function Navbar() {
 
                   {/* Notification Dropdown Popover */}
                   {notificationsOpen && (
-                    <div className="absolute right-0 mt-2 w-80 sm:w-96 rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl overflow-hidden z-50 animate-fade-in text-slate-100">
-                      <div className="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
+                    <div className="absolute right-0 mt-2 w-80 sm:w-96 rounded-2xl bg-[#16324F] border border-[#274d75] shadow-2xl overflow-hidden z-50 animate-fade-in text-slate-100">
+                      <div className="p-4 border-b border-[#274d75] flex items-center justify-between bg-[#0e2032]/80">
                         <span className="font-bold text-sm text-white font-['Outfit',sans-serif]">
                           Notifications ({notifications.length})
                         </span>
@@ -281,7 +281,7 @@ export default function Navbar() {
                           <button
                             type="button"
                             onClick={handleMarkAllRead}
-                            className="text-xs text-teal-400 hover:text-teal-300 flex items-center gap-1"
+                            className="text-xs text-[#14B8A6] hover:text-[#2dd4bf] flex items-center gap-1"
                           >
                             <Check className="w-3.5 h-3.5" />
                             Mark all read
@@ -461,13 +461,13 @@ export default function Navbar() {
                 <div className="flex items-center gap-2">
                   <Link
                     href="/login"
-                    className="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+                    className="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-200 hover:text-white hover:bg-[#1f456c] transition-colors"
                   >
                     Log In
                   </Link>
                   <Link
                     href="/register"
-                    className="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-950 bg-gradient-to-r from-teal-400 to-emerald-400 hover:from-teal-300 hover:to-emerald-300 transition-all shadow-md shadow-teal-500/20"
+                    className="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-[#14B8A6] hover:bg-[#0d9488] transition-all shadow-md shadow-[#14B8A6]/25"
                   >
                     Register
                   </Link>
@@ -488,7 +488,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-slate-800 bg-slate-950 px-4 pt-3 pb-6 space-y-3 animate-fade-in text-slate-200">
+          <div className="md:hidden border-t border-[#224468] bg-[#16324F] px-4 pt-3 pb-6 space-y-3 animate-fade-in text-slate-200">
             <div className="space-y-1">
               <Link
                 href="/rides"

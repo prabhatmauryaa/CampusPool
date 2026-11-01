@@ -1,18 +1,64 @@
 @import "tailwindcss";
 
+@theme {
+  --color-navy: #16324F;
+  --color-navy-dark: #0f2338;
+  --color-navy-deep: #091522;
+  --color-navy-light: #1f4368;
+  
+  --color-teal-brand: #14B8A6;
+  --color-teal-brand-hover: #0d9488;
+  --color-teal-brand-dark: #0f766e;
+  --color-teal-brand-light: #2dd4bf;
+
+  --color-amber-accent: #F5B544;
+  --color-amber-accent-dark: #d99726;
+
+  --color-main-bg: #F6F8FB;
+  --color-card-bg: #FFFFFF;
+  --color-text-primary: #172B4D;
+  --color-text-secondary: #64748B;
+  --color-border-subtle: #E2E8F0;
+  --color-success-green: #16A34A;
+  --color-error-red: #DC2626;
+
+  /* Theme mappings for standard utilities */
+  --color-slate-50: #F6F8FB;
+  --color-slate-900: #172B4D;
+  --color-teal-600: #14B8A6;
+  --color-teal-700: #0d9488;
+  --color-teal-500: #14B8A6;
+  --color-teal-400: #2dd4bf;
+}
+
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --primary-navy: #0b192c;
-  --primary-teal: #0d9488;
-  --accent-teal: #14b8a6;
+  --background: #F6F8FB;
+  --foreground: #172B4D;
+  --primary-navy: #16324F;
+  --primary-navy-dark: #0f2338;
+  --secondary-teal: #14B8A6;
+  --secondary-teal-hover: #0d9488;
+  --accent-teal: #14B8A6;
+  --card-bg: #FFFFFF;
+  --text-primary: #172B4D;
+  --text-secondary: #64748B;
+  --border-color: #E2E8F0;
+  --accent-amber: #F5B544;
+  --success: #16A34A;
+  --error: #DC2626;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   overflow-x: hidden;
+}
+
+/* Headings use Outfit */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Outfit", "Plus Jakarta Sans", sans-serif;
+  color: var(--text-primary);
 }
 
 /* Custom scrollbars */
@@ -21,7 +67,7 @@ body {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #F6F8FB;
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
@@ -37,5 +83,5 @@ body {
 }
 .transition-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(11, 25, 44, 0.08), 0 8px 10px -6px rgba(11, 25, 44, 0.04);
+  box-shadow: 0 10px 25px -5px rgba(22, 50, 79, 0.08), 0 8px 10px -6px rgba(22, 50, 79, 0.04);
 }

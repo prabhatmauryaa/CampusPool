@@ -52,12 +52,12 @@ export default function JoinModal({ ride, isOpen, onClose, onSuccess }) {
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl max-w-md w-full border border-slate-200 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      <div className="bg-white rounded-2xl max-w-md w-full border border-[#E2E8F0] shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         {/* Header */}
-        <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+        <div className="px-6 py-4 border-b border-[#E2E8F0] flex items-center justify-between bg-[#F6F8FB]">
           <div>
-            <h3 className="font-bold text-slate-900 text-base font-['Outfit',sans-serif]">Join Shared Ride</h3>
-            <p className="text-xs text-slate-500">Coordinating trip with {ride.creator?.name}</p>
+            <h3 className="font-bold text-[#16324F] text-base font-['Outfit',sans-serif]">Join Shared Ride</h3>
+            <p className="text-xs text-[#64748B]">Coordinating trip with {ride.creator?.name}</p>
           </div>
           <button
             onClick={onClose}
@@ -71,23 +71,23 @@ export default function JoinModal({ ride, isOpen, onClose, onSuccess }) {
         <div className="p-6 space-y-4">
           {!isAuthenticated ? (
             <div className="text-center py-6 space-y-3">
-              <div className="w-12 h-12 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center mx-auto">
+              <div className="w-12 h-12 rounded-full bg-[#14B8A6]/10 text-[#14B8A6] flex items-center justify-center mx-auto">
                 <Users className="w-6 h-6" />
               </div>
-              <h4 className="text-sm font-bold text-slate-900">Student Sign In Required</h4>
-              <p className="text-xs text-slate-500 max-w-xs mx-auto leading-relaxed">
-                Only verified KIET students with an <code className="text-teal-700">@kiet.edu</code> email can join rides on CampusPool.
+              <h4 className="text-sm font-bold text-[#16324F]">Student Sign In Required</h4>
+              <p className="text-xs text-[#64748B] max-w-xs mx-auto leading-relaxed">
+                Only verified KIET students with an <code className="text-[#14B8A6] font-semibold">@kiet.edu</code> email can join rides on CampusPool.
               </p>
               <div className="pt-2 flex justify-center gap-2">
                 <Link
                   href="/login"
-                  className="px-4 py-2 text-xs font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg shadow-sm"
+                  className="px-4 py-2 text-xs font-semibold text-white bg-[#14B8A6] hover:bg-[#0d9488] rounded-lg shadow-sm"
                 >
                   Log In Now
                 </Link>
                 <Link
                   href="/register"
-                  className="px-4 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg"
+                  className="px-4 py-2 text-xs font-semibold text-[#172B4D] bg-[#F6F8FB] hover:bg-[#E2E8F0] rounded-lg"
                 >
                   Register (@kiet.edu)
                 </Link>
@@ -96,12 +96,12 @@ export default function JoinModal({ ride, isOpen, onClose, onSuccess }) {
           ) : (
             <form onSubmit={handleJoin} className="space-y-4">
               {/* Trip Summary Card */}
-              <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/70 text-xs space-y-1.5">
-                <div className="flex items-center justify-between font-semibold text-slate-800">
+              <div className="p-3.5 bg-[#F6F8FB] rounded-xl border border-[#E2E8F0] text-xs space-y-1.5">
+                <div className="flex items-center justify-between font-semibold text-[#172B4D]">
                   <span>To: {ride.destination}</span>
-                  <span className="text-teal-700">₹{ride.farePerPassenger}/seat</span>
+                  <span className="text-[#14B8A6]">₹{ride.farePerPassenger}/seat</span>
                 </div>
-                <div className="text-slate-500 flex items-center gap-3">
+                <div className="text-[#64748B] flex items-center gap-3">
                   <span className="flex items-center gap-1">
                     <Calendar className="w-3 h-3 text-slate-400" />
                     {ride.travelDate}
@@ -111,7 +111,7 @@ export default function JoinModal({ ride, isOpen, onClose, onSuccess }) {
                     {ride.departureTime}
                   </span>
                 </div>
-                <div className="text-slate-500 flex items-center gap-1 pt-0.5">
+                <div className="text-[#64748B] flex items-center gap-1 pt-0.5">
                   <MapPin className="w-3 h-3 text-slate-400 flex-shrink-0" />
                   <span>Pickup: {ride.campusPickupPoint}</span>
                 </div>
@@ -119,27 +119,27 @@ export default function JoinModal({ ride, isOpen, onClose, onSuccess }) {
 
               {/* Error Message */}
               {error && (
-                <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-700 flex items-start gap-2">
-                  <AlertCircle className="w-4 h-4 text-rose-500 flex-shrink-0 mt-0.5" />
+                <div className="p-3 bg-[#DC2626]/10 border border-[#DC2626]/30 rounded-xl text-xs text-[#DC2626] flex items-start gap-2">
+                  <AlertCircle className="w-4 h-4 text-[#DC2626] flex-shrink-0 mt-0.5" />
                   <span>{error}</span>
                 </div>
               )}
 
               {/* Success Message & Immediate Chat Action */}
               {success && (
-                <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-xs text-emerald-900 space-y-2.5">
+                <div className="p-4 bg-[#16A34A]/10 border border-[#16A34A]/30 rounded-xl text-xs text-[#16A34A] space-y-2.5">
                   <div className="flex items-center gap-2 font-semibold">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#16A34A] flex-shrink-0" />
                     <span>Booking confirmed! You have reserved your seat.</span>
                   </div>
-                  <p className="text-[11px] text-emerald-700">
+                  <p className="text-[11px] text-[#16A34A]/90">
                     A private pickup coordination chat with {ride.creator?.name?.split(' ')[0]} is now active.
                   </p>
                   <div className="pt-1 flex items-center gap-2">
                     <Link
                       href={`/messages?bookingId=${createdBookingId || ''}&conversationId=${createdConversationId || ''}`}
                       onClick={onClose}
-                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg shadow-xs transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-white bg-[#14B8A6] hover:bg-[#0d9488] rounded-lg shadow-xs transition-colors"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
                       Coordinate Pickup Now
@@ -157,7 +157,7 @@ export default function JoinModal({ ride, isOpen, onClose, onSuccess }) {
 
               {/* Seat Selection */}
               <div>
-                <label className="block text-xs font-medium text-slate-700 mb-1.5">
+                <label className="block text-xs font-medium text-[#172B4D] mb-1.5">
                   Number of Seats to Reserve
                 </label>
                 <div className="flex items-center gap-2">
@@ -168,22 +168,22 @@ export default function JoinModal({ ride, isOpen, onClose, onSuccess }) {
                       onClick={() => setSeatsBooked(num)}
                       className={`flex-1 py-2 text-xs font-semibold rounded-lg border transition-all ${
                         seatsBooked === num
-                          ? 'bg-teal-600 text-white border-teal-600 shadow-sm'
-                          : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300'
+                          ? 'bg-[#14B8A6] text-white border-[#14B8A6] shadow-sm'
+                          : 'bg-white text-[#172B4D] border-[#E2E8F0] hover:border-slate-300'
                       }`}
                     >
                       {num} {num === 1 ? 'Seat' : 'Seats'}
                     </button>
                   ))}
                 </div>
-                <p className="text-[10px] text-slate-400 mt-1">
+                <p className="text-[10px] text-[#64748B] mt-1">
                   {ride.availableSeats} seat(s) currently open in this ride
                 </p>
               </div>
 
               {/* Coordination Notes */}
               <div>
-                <label className="block text-xs font-medium text-slate-700 mb-1">
+                <label className="block text-xs font-medium text-[#172B4D] mb-1">
                   Pickup Notes for {ride.creator?.name?.split(' ')[0]} (Optional)
                 </label>
                 <input
@@ -191,25 +191,25 @@ export default function JoinModal({ ride, isOpen, onClose, onSuccess }) {
                   value={pickupNotes}
                   onChange={(e) => setPickupNotes(e.target.value)}
                   placeholder="e.g. Carrying 1 backpack, will be at Gate 1 at 5:25 PM"
-                  className="w-full px-3 py-2 text-xs bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-600"
+                  className="w-full px-3 py-2 text-xs bg-white border border-[#E2E8F0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#14B8A6]/20 focus:border-[#14B8A6] text-[#172B4D]"
                 />
               </div>
 
               {/* Total Contribution Box */}
-              <div className="p-3.5 bg-teal-50/70 border border-teal-200/70 rounded-xl flex items-center justify-between text-xs">
+              <div className="p-3.5 bg-[#F6F8FB] border border-[#E2E8F0] rounded-xl flex items-center justify-between text-xs">
                 <div>
-                  <span className="text-slate-600">Estimated Total Contribution</span>
-                  <div className="text-[11px] text-slate-400 font-mono">
+                  <span className="text-[#64748B]">Estimated Total Contribution</span>
+                  <div className="text-[11px] text-[#64748B] font-mono">
                     ₹{ride.farePerPassenger} × {seatsBooked} {seatsBooked === 1 ? 'seat' : 'seats'}
                   </div>
                 </div>
-                <div className="text-lg font-bold text-teal-800 font-['Outfit',sans-serif]">
+                <div className="text-lg font-bold text-[#16324F] font-['Outfit',sans-serif]">
                   ₹{totalFare}
                 </div>
               </div>
 
               {/* Disclaimer */}
-              <p className="text-[10px] text-slate-400 leading-relaxed italic">
+              <p className="text-[10px] text-[#64748B] leading-relaxed italic">
                 CampusPool does not collect online payments. You coordinate and settle your estimated fare contribution directly with fellow students during the journey.
               </p>
 
@@ -218,14 +218,14 @@ export default function JoinModal({ ride, isOpen, onClose, onSuccess }) {
                 <button
                   type="button"
                   onClick={onClose}
-                  className="px-4 py-2 text-xs font-medium text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
+                  className="px-4 py-2 text-xs font-medium text-[#64748B] hover:bg-slate-100 rounded-lg transition-colors"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={loading || success || ride.availableSeats < 1}
-                  className="px-5 py-2 text-xs font-semibold text-white bg-teal-600 hover:bg-teal-700 disabled:opacity-50 rounded-lg shadow-sm transition-all"
+                  className="px-5 py-2 text-xs font-semibold text-white bg-[#14B8A6] hover:bg-[#0d9488] disabled:opacity-50 rounded-lg shadow-sm transition-all"
                 >
                   {loading ? 'Confirming...' : 'Confirm Booking'}
                 </button>

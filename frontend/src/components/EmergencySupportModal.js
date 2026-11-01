@@ -47,18 +47,18 @@ export default function EmergencySupportModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fade-in">
-      <div className="bg-white rounded-2xl max-w-lg w-full border border-slate-200 shadow-2xl overflow-hidden animate-scale-up">
+      <div className="bg-white rounded-2xl max-w-lg w-full border border-[#E2E8F0] shadow-2xl overflow-hidden animate-scale-up">
         {/* Header */}
-        <div className="p-6 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
+        <div className="p-6 border-b border-[#E2E8F0] bg-[#F6F8FB] flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-rose-600 text-white flex items-center justify-center font-bold shadow-md shadow-rose-600/20">
+            <div className="w-10 h-10 rounded-xl bg-[#DC2626] text-white flex items-center justify-center font-bold shadow-md shadow-[#DC2626]/20">
               <ShieldAlert className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-slate-900 font-['Outfit',sans-serif]">
+              <h3 className="text-lg font-bold text-[#16324F] font-['Outfit',sans-serif]">
                 Campus & Student Emergency Support
               </h3>
-              <p className="text-xs text-slate-500">
+              <p className="text-xs text-[#64748B]">
                 Direct access to campus security and emergency helplines
               </p>
             </div>
@@ -80,15 +80,15 @@ export default function EmergencySupportModal({ isOpen, onClose }) {
             >
               <div className="space-y-0.5">
                 <div className="flex items-center gap-2">
-                  <span className="font-bold text-sm text-slate-900 font-['Outfit',sans-serif]">
+                  <span className="font-bold text-sm text-[#16324F] font-['Outfit',sans-serif]">
                     {contact.title}
                   </span>
                   <span className="text-[10px] px-2 py-0.5 rounded-full font-semibold uppercase bg-white/80 border border-slate-200">
                     {contact.badge}
                   </span>
                 </div>
-                <p className="text-xs text-slate-600">{contact.desc}</p>
-                <p className="text-xs font-mono font-bold text-slate-900 pt-0.5">
+                <p className="text-xs text-[#64748B]">{contact.desc}</p>
+                <p className="text-xs font-mono font-bold text-[#16324F] pt-0.5">
                   {contact.displayNumber}
                 </p>
               </div>
@@ -104,9 +104,9 @@ export default function EmergencySupportModal({ isOpen, onClose }) {
           ))}
 
           {/* Honest Transparent Disclosure Notice */}
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-1 mt-4">
-            <span className="font-semibold text-slate-800 flex items-center gap-1.5">
-              <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
+          <div className="p-3.5 rounded-xl bg-[#F6F8FB] border border-[#E2E8F0] text-xs text-[#64748B] space-y-1 mt-4">
+            <span className="font-semibold text-[#172B4D] flex items-center gap-1.5">
+              <AlertTriangle className="w-3.5 h-3.5 text-[#F5B544]" />
               Safety & Verification Disclosure
             </span>
             <p className="leading-relaxed text-[11px]">
@@ -116,10 +116,10 @@ export default function EmergencySupportModal({ isOpen, onClose }) {
         </div>
 
         {/* Footer */}
-        <div className="p-4 bg-slate-50 border-t border-slate-200 flex justify-end">
+        <div className="p-4 bg-[#F6F8FB] border-t border-[#E2E8F0] flex justify-end">
           <button
             onClick={onClose}
-            className="px-5 py-2 rounded-xl text-xs font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 transition-colors shadow-sm"
+            className="px-5 py-2 rounded-xl text-xs font-semibold text-[#172B4D] bg-white border border-[#E2E8F0] hover:bg-[#F6F8FB] transition-colors shadow-sm"
           >
             Close
           </button>

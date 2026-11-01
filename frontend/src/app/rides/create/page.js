@@ -159,14 +159,14 @@ export default function CreateRidePage() {
 
   if (authLoading || !isAuthenticated) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50">
-        <div className="text-xs font-semibold text-slate-500">Checking authentication...</div>
+      <div className="min-h-screen flex items-center justify-center bg-[#F6F8FB]">
+        <div className="text-xs font-semibold text-[#64748B]">Checking authentication...</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
+    <div className="min-h-screen flex flex-col bg-[#F6F8FB]">
       <Navbar />
 
       <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">

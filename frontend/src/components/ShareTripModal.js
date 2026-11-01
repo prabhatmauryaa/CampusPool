@@ -37,18 +37,18 @@ export default function ShareTripModal({ isOpen, onClose, ride, booking = null }
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fade-in">
-      <div className="bg-white rounded-2xl max-w-lg w-full border border-slate-200 shadow-2xl overflow-hidden animate-scale-up">
+      <div className="bg-white rounded-2xl max-w-lg w-full border border-[#E2E8F0] shadow-2xl overflow-hidden animate-scale-up">
         {/* Header */}
-        <div className="p-6 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
+        <div className="p-6 border-b border-[#E2E8F0] bg-[#F6F8FB] flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center font-bold">
+            <div className="w-10 h-10 rounded-xl bg-[#14B8A6]/20 text-[#14B8A6] flex items-center justify-center font-bold">
               <Share2 className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-slate-900 font-['Outfit',sans-serif]">
+              <h3 className="text-lg font-bold text-[#16324F] font-['Outfit',sans-serif]">
                 Share Trip Itinerary
               </h3>
-              <p className="text-xs text-slate-500">
+              <p className="text-xs text-[#64748B]">
                 Send trip specifics to family, friends, or trusted contacts
               </p>
             </div>
@@ -63,10 +63,10 @@ export default function ShareTripModal({ isOpen, onClose, ride, booking = null }
 
         {/* Content */}
         <div className="p-6 space-y-4">
-          <div className="p-4 rounded-xl bg-slate-900 text-slate-100 font-sans text-xs space-y-2 border border-slate-800 shadow-inner">
-            <div className="flex items-center justify-between pb-2 border-b border-slate-800 text-[11px] text-teal-400 font-semibold font-mono">
+          <div className="p-4 rounded-xl bg-[#16324F] text-slate-100 font-sans text-xs space-y-2 border border-[#224468] shadow-inner">
+            <div className="flex items-center justify-between pb-2 border-b border-[#224468] text-[11px] text-[#14B8A6] font-semibold font-mono">
               <span>CAMPUSPOOL VERIFIED TRIP ITINERARY</span>
-              <span className="text-slate-400">{bookingRef}</span>
+              <span className="text-slate-300">{bookingRef}</span>
             </div>
             <div className="grid grid-cols-2 gap-2 text-xs pt-1">
               <div>
@@ -88,22 +88,22 @@ export default function ShareTripModal({ isOpen, onClose, ride, booking = null }
             </div>
           </div>
 
-          <div className="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-950 text-xs flex items-start gap-2.5">
-            <Shield className="w-4 h-4 shrink-0 text-amber-700 mt-0.5" />
-            <span className="leading-relaxed">
+          <div className="p-3 rounded-xl bg-[#F5B544]/10 border border-[#F5B544]/30 text-amber-950 text-xs flex items-start gap-2.5">
+            <Shield className="w-4 h-4 shrink-0 text-[#d99726] mt-0.5" />
+            <span className="leading-relaxed text-[#172B4D]">
               <strong>Student Travel Safeguard:</strong> Always share your trip schedule with a trusted roommate or family member when commuting off campus.
             </span>
           </div>
 
-          <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 space-y-1">
-            <span className="font-semibold text-slate-900 block flex items-center gap-1.5">
-              <PhoneCall className="w-3.5 h-3.5 text-teal-600" />
+          <div className="p-3 rounded-xl bg-[#F6F8FB] border border-[#E2E8F0] text-xs text-[#172B4D] space-y-1">
+            <span className="font-semibold text-[#16324F] block flex items-center gap-1.5">
+              <PhoneCall className="w-3.5 h-3.5 text-[#14B8A6]" />
               Verified Campus Emergency Helplines
             </span>
-            <div className="text-[11px] text-slate-600 space-y-0.5">
-              <div>• KIET Main Security Booth: <strong className="text-slate-900">0120-2974000</strong></div>
-              <div>• National Emergency Helpline: <strong className="text-slate-900">112</strong></div>
-              <div>• UP Women Helpline: <strong className="text-slate-900">1090</strong></div>
+            <div className="text-[11px] text-[#64748B] space-y-0.5">
+              <div>• KIET Main Security Booth: <strong className="text-[#16324F]">0120-2974000</strong></div>
+              <div>• National Emergency Helpline: <strong className="text-[#16324F]">112</strong></div>
+              <div>• UP Women Helpline: <strong className="text-[#16324F]">1090</strong></div>
             </div>
           </div>
 
@@ -112,7 +112,7 @@ export default function ShareTripModal({ isOpen, onClose, ride, booking = null }
             <button
               type="button"
               onClick={handleWhatsAppShare}
-              className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 transition-colors shadow-sm flex items-center justify-center gap-2"
+              className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-white bg-[#16A34A] hover:bg-emerald-700 transition-colors shadow-sm flex items-center justify-center gap-2"
             >
               <Share2 className="w-4 h-4" />
               Share on WhatsApp
@@ -120,11 +120,11 @@ export default function ShareTripModal({ isOpen, onClose, ride, booking = null }
             <button
               type="button"
               onClick={handleCopy}
-              className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 transition-colors flex items-center justify-center gap-2"
+              className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-[#172B4D] bg-white border border-[#E2E8F0] hover:bg-[#F6F8FB] transition-colors flex items-center justify-center gap-2"
             >
               {copied ? (
                 <>
-                  <Check className="w-4 h-4 text-emerald-600" />
+                  <Check className="w-4 h-4 text-[#16A34A]" />
                   Copied Itinerary!
                 </>
               ) : (

@@ -38,11 +38,11 @@ export default function FareCalculator({
   const content = (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2 text-slate-900 font-semibold text-sm">
-          <Calculator className="w-4 h-4 text-teal-600" />
+        <div className="flex items-center gap-2 text-[#16324F] font-semibold text-sm">
+          <Calculator className="w-4 h-4 text-[#14B8A6]" />
           <span>Transparent Fare Split Estimator</span>
         </div>
-        <span className="text-[11px] font-medium bg-teal-50 text-teal-700 px-2 py-0.5 rounded-full border border-teal-200">
+        <span className="text-[11px] font-medium bg-[#14B8A6]/10 text-[#14B8A6] px-2 py-0.5 rounded-full border border-[#14B8A6]/30">
           Illustrative Calculation
         </span>
       </div>
@@ -50,7 +50,7 @@ export default function FareCalculator({
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Total Cost Input */}
         <div>
-          <label className="block text-xs font-medium text-slate-700 mb-1">
+          <label className="block text-xs font-medium text-[#172B4D] mb-1">
             Total Vehicle / Cab Fare (₹)
           </label>
           <div className="relative">
@@ -63,16 +63,16 @@ export default function FareCalculator({
               step="10"
               value={totalCost}
               onChange={handleCostChange}
-              className="w-full pl-7 pr-3 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-600 font-mono"
+              className="w-full pl-7 pr-3 py-2 text-sm bg-white border border-[#E2E8F0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#14B8A6]/20 focus:border-[#14B8A6] font-mono text-[#172B4D]"
               placeholder="e.g. 600"
             />
           </div>
-          <span className="text-[10px] text-slate-400 mt-0.5 block">Estimated total meter or app fare</span>
+          <span className="text-[10px] text-[#64748B] mt-0.5 block">Estimated total meter or app fare</span>
         </div>
 
         {/* Number of Passengers */}
         <div>
-          <label className="block text-xs font-medium text-slate-700 mb-1">
+          <label className="block text-xs font-medium text-[#172B4D] mb-1">
             Number of Co-Riders
           </label>
           <div className="flex items-center gap-2">
@@ -83,28 +83,28 @@ export default function FareCalculator({
                 onClick={() => handlePassengersChange(num)}
                 className={`flex-1 py-1.5 text-xs font-medium rounded-lg border transition-all ${
                   passengers === num
-                    ? 'bg-teal-600 text-white border-teal-600 shadow-sm'
-                    : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
+                    ? 'bg-[#14B8A6] text-white border-[#14B8A6] shadow-sm'
+                    : 'bg-white text-[#172B4D] border-[#E2E8F0] hover:border-slate-300 hover:bg-[#F6F8FB]'
                 }`}
               >
                 {num}
               </button>
             ))}
           </div>
-          <span className="text-[10px] text-slate-400 mt-0.5 block">Student passenger seats</span>
+          <span className="text-[10px] text-[#64748B] mt-0.5 block">Student passenger seats</span>
         </div>
       </div>
 
       {/* Model Option */}
-      <div className="flex items-center gap-4 text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg border border-slate-200/60">
-        <span className="font-medium text-slate-700">Split Mode:</span>
+      <div className="flex items-center gap-4 text-xs text-[#64748B] bg-[#F6F8FB] p-2.5 rounded-lg border border-[#E2E8F0]">
+        <span className="font-medium text-[#172B4D]">Split Mode:</span>
         <label className="flex items-center gap-1.5 cursor-pointer">
           <input
             type="radio"
             name="splitMode"
             checked={sharingModel === 'passengers_only'}
             onChange={() => setSharingModel('passengers_only')}
-            className="text-teal-600 focus:ring-teal-500 text-xs"
+            className="text-[#14B8A6] focus:ring-[#14B8A6] text-xs"
           />
           <span>Split across passenger seats ({passengers})</span>
         </label>
@@ -114,22 +114,22 @@ export default function FareCalculator({
             name="splitMode"
             checked={sharingModel === 'equal_all'}
             onChange={() => setSharingModel('equal_all')}
-            className="text-teal-600 focus:ring-teal-500 text-xs"
+            className="text-[#14B8A6] focus:ring-[#14B8A6] text-xs"
           />
           <span>Include Host (+1)</span>
         </label>
       </div>
 
       {/* Result Display Box */}
-      <div className="p-4 rounded-xl bg-gradient-to-br from-teal-50/70 to-emerald-50/40 border border-teal-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div className="p-4 rounded-xl bg-[#F6F8FB] border border-[#E2E8F0] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
-          <div className="text-xs text-slate-600 font-medium">Estimated Contribution Per Rider</div>
-          <div className="text-2xl font-extrabold text-teal-800 font-['Outfit',sans-serif] flex items-center">
+          <div className="text-xs text-[#64748B] font-medium">Estimated Contribution Per Rider</div>
+          <div className="text-2xl font-extrabold text-[#16324F] font-['Outfit',sans-serif] flex items-center">
             <span className="text-xl">₹</span>
             {farePerPerson}
-            <span className="text-xs font-normal text-slate-500 ml-1.5">/ person</span>
+            <span className="text-xs font-normal text-[#64748B] ml-1.5">/ person</span>
           </div>
-          <div className="text-[11px] text-teal-700 mt-0.5 flex items-center gap-1">
+          <div className="text-[11px] text-[#14B8A6] font-semibold mt-0.5 flex items-center gap-1">
             <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" />
             <span>
               Total ₹{totalCost} ÷ {totalSharers} riders = ₹{farePerPerson} each
@@ -137,7 +137,7 @@ export default function FareCalculator({
           </div>
         </div>
 
-        <div className="text-[11px] text-slate-500 max-w-xs leading-relaxed border-t sm:border-t-0 sm:border-l border-teal-200/50 pt-2 sm:pt-0 sm:pl-3">
+        <div className="text-[11px] text-[#64748B] max-w-xs leading-relaxed border-t sm:border-t-0 sm:border-l border-[#E2E8F0] pt-2 sm:pt-0 sm:pl-3">
           <div className="flex items-start gap-1">
             <Info className="w-3.5 h-3.5 text-slate-400 flex-shrink-0 mt-0.5" />
             <span>
@@ -154,7 +154,7 @@ export default function FareCalculator({
   }
 
   return (
-    <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+    <div className="bg-white rounded-2xl p-5 border border-[#E2E8F0] shadow-sm">
       {content}
     </div>
   );

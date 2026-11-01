@@ -96,29 +96,29 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 selection:bg-teal-500 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#F6F8FB] selection:bg-[#14B8A6] selection:text-white">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#08101E] via-[#0B1528] to-[#0F1E36] text-white pt-14 pb-20 lg:pt-20 lg:pb-32 border-b border-slate-800">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#16324F] via-[#12283e] to-[#0e2032] text-white pt-14 pb-20 lg:pt-20 lg:pb-32 border-b border-[#224468]">
         {/* Glow ambient background lights */}
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
-        <div className="absolute bottom-0 left-1/4 w-[450px] h-[450px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#14B8A6]/15 rounded-full blur-3xl pointer-events-none -z-10" />
+        <div className="absolute bottom-0 left-1/4 w-[450px] h-[450px] bg-[#14B8A6]/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               {/* College Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-300 text-xs font-semibold backdrop-blur-md">
-                <School className="w-4 h-4 text-teal-400" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#14B8A6]/20 border border-[#14B8A6]/40 text-[#2dd4bf] text-xs font-semibold backdrop-blur-md">
+                <School className="w-4 h-4 text-[#14B8A6]" />
                 <span>KIET Group of Institutions • Student Mobility Platform</span>
               </div>
 
               {/* Main Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] font-['Outfit',sans-serif]">
                 Your Campus. <br />
-                Your Route. <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-300">Your Ride.</span>
+                Your Route. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#14B8A6] to-[#2dd4bf]">Your Ride.</span>
               </h1>
 
               {/* Supporting Text */}
@@ -131,7 +131,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
                 <Link
                   href="/rides"
-                  className="w-full sm:w-auto px-7 py-3.5 text-sm font-semibold text-slate-950 bg-gradient-to-r from-teal-400 to-emerald-400 hover:from-teal-300 hover:to-emerald-300 rounded-xl shadow-lg shadow-teal-500/20 transition-all flex items-center justify-center gap-2 group"
+                  className="w-full sm:w-auto px-7 py-3.5 text-sm font-semibold text-white bg-[#14B8A6] hover:bg-[#0d9488] rounded-xl shadow-lg shadow-[#14B8A6]/25 transition-all flex items-center justify-center gap-2 group"
                 >
                   <Search className="w-4 h-4" />
                   Find a Ride
@@ -139,18 +139,18 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/rides/create"
-                  className="w-full sm:w-auto px-7 py-3.5 text-sm font-semibold text-slate-100 bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 rounded-xl transition-all flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto px-7 py-3.5 text-sm font-semibold text-slate-200 bg-[#16324F]/90 hover:bg-[#16324F] border border-[#274d75] rounded-xl transition-all flex items-center justify-center gap-2"
                 >
-                  <PlusCircle className="w-4 h-4 text-teal-400" />
+                  <PlusCircle className="w-4 h-4 text-[#14B8A6]" />
                   Offer a Ride
                 </Link>
               </div>
 
               {/* Quick Search Widget */}
               <div className="pt-6">
-                <div className="bg-slate-900/90 backdrop-blur-md p-3.5 rounded-2xl border border-slate-700/80 shadow-2xl flex flex-col sm:flex-row items-center gap-3">
+                <div className="bg-[#16324F]/90 backdrop-blur-md p-3.5 rounded-2xl border border-[#274d75] shadow-2xl flex flex-col sm:flex-row items-center gap-3">
                   <div className="relative flex-1 w-full">
-                    <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-teal-400">
+                    <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#14B8A6]">
                       <MapPin className="w-4 h-4" />
                     </span>
                     <input
@@ -158,25 +158,25 @@ export default function HomePage() {
                       value={searchDestination}
                       onChange={(e) => setSearchDestination(e.target.value)}
                       placeholder="Destination (e.g. Ghaziabad Station, Anand Vihar, Airport)"
-                      className="w-full pl-10 pr-3 py-2.5 text-xs bg-slate-950 border border-slate-700/80 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-teal-500"
+                      className="w-full pl-10 pr-3 py-2.5 text-xs bg-[#0e2032] border border-[#274d75] rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-[#14B8A6]"
                     />
                   </div>
 
                   <div className="relative w-full sm:w-44">
-                    <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-teal-400">
+                    <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#14B8A6]">
                       <Calendar className="w-4 h-4" />
                     </span>
                     <input
                       type="date"
                       value={searchDate}
                       onChange={(e) => setSearchDate(e.target.value)}
-                      className="w-full pl-10 pr-3 py-2.5 text-xs bg-slate-950 border border-slate-700/80 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                      className="w-full pl-10 pr-3 py-2.5 text-xs bg-[#0e2032] border border-[#274d75] rounded-xl text-white focus:outline-none focus:border-[#14B8A6]"
                     />
                   </div>
 
                   <Link
                     href={`/rides?destination=${encodeURIComponent(searchDestination)}&date=${encodeURIComponent(searchDate)}`}
-                    className="w-full sm:w-auto px-6 py-2.5 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-400 hover:to-emerald-400 text-slate-950 text-xs font-bold rounded-xl flex items-center justify-center gap-1.5 transition-all shadow-md shadow-teal-500/20"
+                    className="w-full sm:w-auto px-6 py-2.5 bg-[#14B8A6] hover:bg-[#0d9488] text-white text-xs font-bold rounded-xl flex items-center justify-center gap-1.5 transition-all shadow-md shadow-[#14B8A6]/25"
                   >
                     <Search className="w-3.5 h-3.5" />
                     Search
@@ -224,9 +224,9 @@ export default function HomePage() {
                 </div>
 
                 {/* Simulated Live Route Card */}
-                <div className="bg-slate-900/90 backdrop-blur-md rounded-2xl p-5 border border-slate-700/80 shadow-2xl space-y-3.5">
-                  <div className="flex items-center justify-between text-xs pb-2 border-b border-slate-800">
-                    <span className="text-teal-400 font-semibold flex items-center gap-1.5">
+                <div className="bg-[#16324F]/90 backdrop-blur-md rounded-2xl p-5 border border-[#274d75] shadow-2xl space-y-3.5">
+                  <div className="flex items-center justify-between text-xs pb-2 border-b border-[#224468]">
+                    <span className="text-[#14B8A6] font-semibold flex items-center gap-1.5">
                       <MapPin className="w-3.5 h-3.5" />
                       Popular Commuter Route
                     </span>
@@ -235,34 +235,34 @@ export default function HomePage() {
 
                   <div className="space-y-2 text-xs">
                     <div className="flex items-start gap-2.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-teal-400 mt-1 ring-2 ring-teal-900" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#14B8A6] mt-1 ring-2 ring-[#14B8A6]/30" />
                       <div>
                         <div className="font-bold text-white text-sm">KIET Main Gate (Gate 1)</div>
-                        <div className="text-[11px] text-slate-400">Meeting spot: Outside Security Booth</div>
+                        <div className="text-[11px] text-slate-300">Meeting spot: Outside Security Booth</div>
                       </div>
                     </div>
 
-                    <div className="border-l-2 border-dashed border-slate-700 ml-1 pl-4 py-1 text-[11px] text-slate-400">
+                    <div className="border-l-2 border-dashed border-[#274d75] ml-1 pl-4 py-1 text-[11px] text-slate-400">
                       <span>22 km transit • 35 mins via NH-58</span>
                     </div>
 
                     <div className="flex items-start gap-2.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 mt-1 ring-2 ring-emerald-900" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-white mt-1 ring-2 ring-white/20" />
                       <div>
                         <div className="font-bold text-white text-sm">Ghaziabad Railway Station (GZB)</div>
-                        <div className="text-[11px] text-slate-400">Platform 1 Main Exit</div>
+                        <div className="text-[11px] text-slate-300">Platform 1 Main Exit</div>
                       </div>
                     </div>
                   </div>
 
                   {/* Equal-split fare preview */}
-                  <div className="p-3.5 rounded-xl bg-teal-950/70 border border-teal-800/40 flex items-center justify-between">
+                  <div className="p-3.5 rounded-xl bg-[#0f2338] border border-[#14B8A6]/30 flex items-center justify-between">
                     <div>
                       <span className="text-[11px] text-slate-300 block">Total Vehicle Auto Fare</span>
                       <span className="font-mono text-white text-xs">₹300 split across 3 co-riders</span>
                     </div>
                     <div className="text-right">
-                      <span className="text-xl font-extrabold text-teal-300 font-mono">₹100</span>
+                      <span className="text-xl font-extrabold text-[#2dd4bf] font-mono">₹100</span>
                       <span className="text-[10px] text-slate-400 block">/ student</span>
                     </div>
                   </div>
@@ -396,12 +396,12 @@ export default function HomePage() {
       </section>
 
       {/* Safety & Safeguards Architecture */}
-      <section className="py-20 bg-slate-900 text-white">
+      <section className="py-20 bg-[#16324F] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-300 text-xs font-semibold">
-                <ShieldCheck className="w-4 h-4" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#14B8A6]/20 border border-[#14B8A6]/40 text-[#2dd4bf] text-xs font-semibold">
+                <ShieldCheck className="w-4 h-4 text-[#14B8A6]" />
                 <span>Student Trust & Safety Architecture</span>
               </div>
 
@@ -457,19 +457,19 @@ export default function HomePage() {
             </div>
 
             {/* Common Campus Journey Showcase */}
-            <div className="p-8 rounded-3xl bg-slate-800/80 border border-slate-700/80 space-y-5">
+            <div className="p-8 rounded-3xl bg-[#0f2338] border border-[#224468] space-y-5">
               <h3 className="text-base font-bold text-white font-['Outfit',sans-serif]">
                 Common Campus Transit Points
               </h3>
 
               <div className="space-y-3 text-xs">
-                <div className="p-3 bg-slate-900/60 rounded-xl border border-slate-700 flex items-center justify-between">
+                <div className="p-3 bg-[#16324F]/70 rounded-xl border border-[#224468] flex items-center justify-between">
                   <div>
                     <div className="font-semibold text-slate-200">KIET Main Gate ➔ Ghaziabad Station (GZB)</div>
                     <div className="text-[11px] text-slate-400">Auto Share • 3 Co-Riders</div>
                   </div>
                   <div className="text-right">
-                    <div className="font-bold text-teal-400 text-sm">₹100 / student</div>
+                    <div className="font-bold text-[#14B8A6] text-sm">₹100 / student</div>
                     <div className="text-[10px] text-slate-400">Total ₹300</div>
                   </div>
                 </div>
@@ -571,7 +571,7 @@ export default function HomePage() {
       </section>
 
       {/* Call to Action Banner */}
-      <section className="py-16 bg-gradient-to-r from-[#08101E] to-[#0D9488] text-white text-center">
+      <section className="py-16 bg-gradient-to-r from-[#16324F] to-[#14B8A6] text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight font-['Outfit',sans-serif]">
             Ready to Travel Smarter from KIET?

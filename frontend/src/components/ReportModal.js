@@ -71,18 +71,18 @@ export default function ReportModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fade-in">
-      <div className="bg-white rounded-2xl max-w-lg w-full border border-slate-200 shadow-2xl overflow-hidden animate-scale-up">
+      <div className="bg-white rounded-2xl max-w-lg w-full border border-[#E2E8F0] shadow-2xl overflow-hidden animate-scale-up">
         {/* Header */}
-        <div className="p-6 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
+        <div className="p-6 border-b border-[#E2E8F0] bg-[#F6F8FB] flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center font-bold">
+            <div className="w-10 h-10 rounded-xl bg-rose-100 text-[#DC2626] flex items-center justify-center font-bold">
               <Flag className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-slate-900 font-['Outfit',sans-serif]">
+              <h3 className="text-lg font-bold text-[#16324F] font-['Outfit',sans-serif]">
                 {title}
               </h3>
-              <p className="text-xs text-slate-500">
+              <p className="text-xs text-[#64748B]">
                 Strictly confidential • Reviewed only by KIET Administration
               </p>
             </div>
@@ -98,30 +98,30 @@ export default function ReportModal({
         {/* Form Body */}
         {success ? (
           <div className="p-8 text-center space-y-4">
-            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+            <div className="w-16 h-16 rounded-full bg-[#16A34A]/15 text-[#16A34A] flex items-center justify-center mx-auto">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h4 className="text-xl font-bold text-slate-900 font-['Outfit',sans-serif]">
+            <h4 className="text-xl font-bold text-[#16324F] font-['Outfit',sans-serif]">
               Report Submitted in Strict Confidence
             </h4>
-            <p className="text-sm text-slate-600 max-w-sm mx-auto leading-relaxed">
+            <p className="text-sm text-[#64748B] max-w-sm mx-auto leading-relaxed">
               Thank you for keeping CampusPool safe. Your report has been securely queued for review by the campus administrator. The reported party will never see who submitted this report.
             </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="p-6 space-y-4">
             {error && (
-              <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs flex items-center gap-2">
-                <AlertCircle className="w-4 h-4 shrink-0 text-rose-600" />
+              <div className="p-3.5 rounded-xl bg-[#DC2626]/10 border border-[#DC2626]/30 text-[#DC2626] text-xs flex items-center gap-2">
+                <AlertCircle className="w-4 h-4 shrink-0 text-[#DC2626]" />
                 <span>{error}</span>
               </div>
             )}
 
             {/* Target context banner */}
             {(reportedUser || reportedRide) && (
-              <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 flex items-center justify-between">
-                <span className="text-slate-500">Target of Concern:</span>
-                <span className="font-semibold text-slate-900">
+              <div className="p-3 rounded-xl bg-[#F6F8FB] border border-[#E2E8F0] text-xs text-[#172B4D] flex items-center justify-between">
+                <span className="text-[#64748B]">Target of Concern:</span>
+                <span className="font-semibold text-[#16324F]">
                   {reportedUser?.name
                     ? `${reportedUser.name} (${reportedUser.rollNumber || 'Student'})`
                     : reportedRide?.destination
@@ -133,13 +133,13 @@ export default function ReportModal({
 
             {/* Category selection */}
             <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+              <label className="block text-xs font-semibold text-[#172B4D] mb-1.5">
                 Report Category <span className="text-rose-500">*</span>
               </label>
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent bg-white"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8F0] text-sm focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent bg-white text-[#172B4D]"
               >
                 {categories.map((c) => (
                   <option key={c.value} value={c.value}>
@@ -151,7 +151,7 @@ export default function ReportModal({
 
             {/* Description */}
             <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+              <label className="block text-xs font-semibold text-[#172B4D] mb-1.5">
                 Description of Concern <span className="text-rose-500">*</span>
               </label>
               <textarea
@@ -159,18 +159,18 @@ export default function ReportModal({
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Please describe specifically what occurred, including locations or pickup issues..."
                 rows={4}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent resize-none"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8F0] text-sm focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent resize-none text-[#172B4D]"
                 maxLength={1000}
                 required
               />
-              <span className="text-[11px] text-slate-400 block text-right">
+              <span className="text-[11px] text-[#64748B] block text-right">
                 {description.length}/1000
               </span>
             </div>
 
             {/* Supporting Information */}
             <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+              <label className="block text-xs font-semibold text-[#172B4D] mb-1.5">
                 Supporting Information / References (Optional)
               </label>
               <input
@@ -178,33 +178,33 @@ export default function ReportModal({
                 value={supportingNotes}
                 onChange={(e) => setSupportingNotes(e.target.value)}
                 placeholder="e.g. Chat message timestamp, gate number, vehicle model"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8F0] text-sm focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent text-[#172B4D]"
                 maxLength={300}
               />
             </div>
 
             {/* Privacy Guarantee Banner */}
-            <div className="p-3.5 rounded-xl bg-teal-50 border border-teal-200 text-xs text-teal-950 flex items-start gap-2.5">
-              <ShieldCheck className="w-4 h-4 shrink-0 text-teal-700 mt-0.5" />
+            <div className="p-3.5 rounded-xl bg-[#14B8A6]/10 border border-[#14B8A6]/30 text-xs text-[#16324F] flex items-start gap-2.5">
+              <ShieldCheck className="w-4 h-4 shrink-0 text-[#14B8A6] mt-0.5" />
               <div className="leading-relaxed">
                 <strong>Strict Privacy Guarantee:</strong> Submitted reports and administrative investigation notes are accessible only to authorized campus administrators. Co-riders will not be notified who submitted this report.
               </div>
             </div>
 
             {/* Modal Actions */}
-            <div className="pt-2 flex items-center justify-end gap-3 border-t border-slate-100">
+            <div className="pt-2 flex items-center justify-end gap-3 border-t border-[#E2E8F0]">
               <button
                 type="button"
                 onClick={onClose}
                 disabled={loading}
-                className="px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 transition-colors"
+                className="px-4 py-2.5 rounded-xl text-sm font-semibold text-[#172B4D] bg-white border border-[#E2E8F0] hover:bg-[#F6F8FB] transition-colors"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={loading}
-                className="px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-rose-600 hover:bg-rose-700 transition-colors shadow-sm disabled:opacity-50 flex items-center gap-2"
+                className="px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-[#DC2626] hover:bg-red-700 transition-colors shadow-sm disabled:opacity-50 flex items-center gap-2"
               >
                 <Flag className="w-4 h-4" />
                 {loading ? 'Submitting...' : 'Submit Report'}

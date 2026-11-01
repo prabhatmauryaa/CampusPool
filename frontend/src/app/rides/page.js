@@ -108,7 +108,7 @@ function RidesContent() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
+    <div className="min-h-screen flex flex-col bg-[#F6F8FB]">
       <Navbar />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
@@ -116,12 +116,12 @@ function RidesContent() {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-2">
           <div>
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-semibold">
+              <span className="px-2.5 py-0.5 rounded-full bg-[#14B8A6]/10 border border-[#14B8A6]/30 text-[#14B8A6] text-xs font-semibold">
                 KIET Campus Transit
               </span>
-              <span className="text-xs text-slate-400 font-mono">@kiet.edu only</span>
+              <span className="text-xs text-[#64748B] font-mono">@kiet.edu only</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-['Outfit',sans-serif] mt-1">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#16324F] tracking-tight font-['Outfit',sans-serif] mt-1">
               Find a Shared Ride
             </h1>
             <p className="text-xs text-slate-500">
